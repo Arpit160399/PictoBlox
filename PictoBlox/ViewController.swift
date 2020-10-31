@@ -8,19 +8,23 @@
 import UIKit
 import WebKit
 class ViewController: UIViewController {
+   
     private var webView: WKWebView!
     private let name = "count"
     private var count = 0
     private let configuration = WKWebViewConfiguration()
     private let acivityIndicater = UIActivityIndicatorView()
+    private let forward = UIButton()
+    private let backward = UIButton()
     private lazy var loadingView: UIView = {
         let loadingView = UIView()
         loadingView.addSubview(acivityIndicater)
-        loadingView.backgroundColor = .lightGray
+        loadingView.backgroundColor = .black
         loadingView.alpha = 0.9
         loadingView.layer.cornerRadius = 15
         acivityIndicater.translatesAutoresizingMaskIntoConstraints = false
         acivityIndicater.centerYAnchor.constraint(equalTo: loadingView.centerYAnchor).isActive = true
+        acivityIndicater.color = .white
         acivityIndicater.centerXAnchor.constraint(equalTo: loadingView.centerXAnchor).isActive = true
         loadingView.translatesAutoresizingMaskIntoConstraints = false
         return loadingView
@@ -28,8 +32,7 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        addCssFile()
-        addScriptFile()
+        setUpNavigation()
         setUpWebView()
         setUploadView()
     }
@@ -38,13 +41,13 @@ class ViewController: UIViewController {
         configuration.userContentController.add(self, name: name)
         webView = WKWebView(frame: .zero, configuration: configuration)
         view.addSubview(webView)
-        let url = URL(string: "https://google.com")!
+        let url = URL(string: "https://apple.com")!
         let request = URLRequest(url: url)
         webView.load(request)
         webView.navigationDelegate = self
         webView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            webView.topAnchor.constraint(equalTo: view.topAnchor),
+            webView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
             webView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
             webView.leftAnchor.constraint(equalTo: view.leftAnchor),
             webView.rightAnchor.constraint(equalTo: view.rightAnchor)
@@ -52,52 +55,33 @@ class ViewController: UIViewController {
     }
 }
 
-// MARK: - Loading css and javascript file
-
+// MARK: - setting site Navigation system
 extension ViewController {
-    fileprivate func addCssFile() {
-        let cssFile = runWebCode(name: "style", type: "css")
-        let cssStyle = """
-            javascript:(function() {
-            var parent = document.getElementsByTagName('head').item(0);
-            var style = document.createElement('style');
-            style.type = 'text/css';
-            style.innerHTML = window.atob('\(encodeStringTo64(fromString: cssFile)!)');
-            parent.appendChild(style)})()
-        """
-        let style = WKUserScript(source: cssStyle, injectionTime: .atDocumentEnd, forMainFrameOnly: false)
-        configuration.userContentController.addUserScript(style)
+    
+    fileprivate func setUpNavigation(){
+        navigationController?.navigationBar.barTintColor = .systemBlue
+        navigationController?.navigationBar.tintColor = .white
+        forward.setTitle("Forward", for: .normal)
+        backward.setTitle("backward", for: .normal)
+        navigationItem.leftBarButtonItem = UIBarButtonItem(customView: backward)
+        navigationItem.rightBarButtonItem = UIBarButtonItem(customView: forward)
+        forward.addTarget(self, action: #selector(moveForward), for: .touchUpInside)
+        backward.addTarget(self, action: #selector(moveBackward), for: .touchUpInside)
     }
-
-    fileprivate func addScriptFile() {
-        let jsFile = runWebCode(name: "script", type: "js")
-        let script = WKUserScript(source: jsFile, injectionTime: .atDocumentEnd, forMainFrameOnly: false)
-        configuration.userContentController.addUserScript(script)
+    
+  @objc func moveForward(){
+        webView.goForward()
     }
-
-    func runWebCode(name: String, type: String) -> String {
-        guard let path = Bundle.main.path(forResource: name, ofType: type, inDirectory: "web Code") else {
-            print("file not found")
-            return ""
-        }
-        do {
-            let file = try String(contentsOfFile: path, encoding: .utf8)
-            return file
-        } catch {
-            print(error)
-            return ""
-        }
+    
+   @objc func moveBackward(){
+        webView.goBack()
     }
-
-    private func encodeStringTo64(fromString: String) -> String? {
-        let plainData = fromString.data(using: .utf8)
-        return plainData?.base64EncodedString(options: [])
-    }
+    
 }
-
 // MARK: - Scrpit message handler
 
 extension ViewController: WKScriptMessageHandler {
+    
     func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {
         if message.name == name {
             guard let value = message.body as? String else { return }
@@ -129,6 +113,20 @@ extension ViewController: WKNavigationDelegate {
 
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
         stopAnimation()
+        if webView.canGoBack {
+            backward.isEnabled = true
+            backward.alpha = 1
+        } else {
+            backward.isEnabled = false
+            backward.alpha = 0.4
+        }
+        if webView.canGoForward {
+            forward.isEnabled = true
+            forward.alpha = 1
+        } else {
+            forward.isEnabled = false
+            forward.alpha = 0.4
+        }
     }
 
     private func setUploadView() {
@@ -136,8 +134,8 @@ extension ViewController: WKNavigationDelegate {
         view.addSubview(loadingView)
         loadingView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         loadingView.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
-        loadingView.widthAnchor.constraint(equalToConstant: 60).isActive = true
-        loadingView.heightAnchor.constraint(equalToConstant: 60).isActive = true
+        loadingView.widthAnchor.constraint(equalToConstant: 70).isActive = true
+        loadingView.heightAnchor.constraint(equalToConstant: 70).isActive = true
     }
 
     private func loadingAnimation() {
