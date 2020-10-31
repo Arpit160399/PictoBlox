@@ -1,0 +1,598 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		83940BA4254D0F5C00951AEF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83940BA3254D0F5C00951AEF /* AppDelegate.swift */; };
+		83940BA6254D0F5C00951AEF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83940BA5254D0F5C00951AEF /* SceneDelegate.swift */; };
+		83940BA8254D0F5C00951AEF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83940BA7254D0F5C00951AEF /* ViewController.swift */; };
+		83940BAB254D0F5C00951AEF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83940BA9254D0F5C00951AEF /* Main.storyboard */; };
+		83940BAD254D0F6000951AEF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83940BAC254D0F6000951AEF /* Assets.xcassets */; };
+		83940BB0254D0F6000951AEF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83940BAE254D0F6000951AEF /* LaunchScreen.storyboard */; };
+		83940BBB254D0F6100951AEF /* PictoBloxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83940BBA254D0F6000951AEF /* PictoBloxTests.swift */; };
+		83940BC6254D0F6100951AEF /* PictoBloxUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83940BC5254D0F6100951AEF /* PictoBloxUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		83940BB7254D0F6000951AEF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 83940B98254D0F5C00951AEF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 83940B9F254D0F5C00951AEF;
+			remoteInfo = PictoBlox;
+		};
+		83940BC2254D0F6100951AEF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 83940B98254D0F5C00951AEF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 83940B9F254D0F5C00951AEF;
+			remoteInfo = PictoBlox;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		83940BA0254D0F5C00951AEF /* PictoBlox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PictoBlox.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		83940BA3254D0F5C00951AEF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		83940BA5254D0F5C00951AEF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		83940BA7254D0F5C00951AEF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		83940BAA254D0F5C00951AEF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		83940BAC254D0F6000951AEF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		83940BAF254D0F6000951AEF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		83940BB1254D0F6000951AEF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		83940BB6254D0F6000951AEF /* PictoBloxTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PictoBloxTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		83940BBA254D0F6000951AEF /* PictoBloxTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictoBloxTests.swift; sourceTree = "<group>"; };
+		83940BBC254D0F6100951AEF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		83940BC1254D0F6100951AEF /* PictoBloxUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PictoBloxUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		83940BC5254D0F6100951AEF /* PictoBloxUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictoBloxUITests.swift; sourceTree = "<group>"; };
+		83940BC7254D0F6100951AEF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		83940B9D254D0F5C00951AEF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		83940BB3254D0F6000951AEF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		83940BBE254D0F6100951AEF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		83940B97254D0F5C00951AEF = {
+			isa = PBXGroup;
+			children = (
+				83940BA2254D0F5C00951AEF /* PictoBlox */,
+				83940BB9254D0F6000951AEF /* PictoBloxTests */,
+				83940BC4254D0F6100951AEF /* PictoBloxUITests */,
+				83940BA1254D0F5C00951AEF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		83940BA1254D0F5C00951AEF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				83940BA0254D0F5C00951AEF /* PictoBlox.app */,
+				83940BB6254D0F6000951AEF /* PictoBloxTests.xctest */,
+				83940BC1254D0F6100951AEF /* PictoBloxUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		83940BA2254D0F5C00951AEF /* PictoBlox */ = {
+			isa = PBXGroup;
+			children = (
+				83940BA3254D0F5C00951AEF /* AppDelegate.swift */,
+				83940BA5254D0F5C00951AEF /* SceneDelegate.swift */,
+				83940BA7254D0F5C00951AEF /* ViewController.swift */,
+				83940BA9254D0F5C00951AEF /* Main.storyboard */,
+				83940BAC254D0F6000951AEF /* Assets.xcassets */,
+				83940BAE254D0F6000951AEF /* LaunchScreen.storyboard */,
+				83940BB1254D0F6000951AEF /* Info.plist */,
+			);
+			path = PictoBlox;
+			sourceTree = "<group>";
+		};
+		83940BB9254D0F6000951AEF /* PictoBloxTests */ = {
+			isa = PBXGroup;
+			children = (
+				83940BBA254D0F6000951AEF /* PictoBloxTests.swift */,
+				83940BBC254D0F6100951AEF /* Info.plist */,
+			);
+			path = PictoBloxTests;
+			sourceTree = "<group>";
+		};
+		83940BC4254D0F6100951AEF /* PictoBloxUITests */ = {
+			isa = PBXGroup;
+			children = (
+				83940BC5254D0F6100951AEF /* PictoBloxUITests.swift */,
+				83940BC7254D0F6100951AEF /* Info.plist */,
+			);
+			path = PictoBloxUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		83940B9F254D0F5C00951AEF /* PictoBlox */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 83940BCA254D0F6100951AEF /* Build configuration list for PBXNativeTarget "PictoBlox" */;
+			buildPhases = (
+				83940B9C254D0F5C00951AEF /* Sources */,
+				83940B9D254D0F5C00951AEF /* Frameworks */,
+				83940B9E254D0F5C00951AEF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PictoBlox;
+			productName = PictoBlox;
+			productReference = 83940BA0254D0F5C00951AEF /* PictoBlox.app */;
+			productType = "com.apple.product-type.application";
+		};
+		83940BB5254D0F6000951AEF /* PictoBloxTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 83940BCD254D0F6100951AEF /* Build configuration list for PBXNativeTarget "PictoBloxTests" */;
+			buildPhases = (
+				83940BB2254D0F6000951AEF /* Sources */,
+				83940BB3254D0F6000951AEF /* Frameworks */,
+				83940BB4254D0F6000951AEF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				83940BB8254D0F6000951AEF /* PBXTargetDependency */,
+			);
+			name = PictoBloxTests;
+			productName = PictoBloxTests;
+			productReference = 83940BB6254D0F6000951AEF /* PictoBloxTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		83940BC0254D0F6100951AEF /* PictoBloxUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 83940BD0254D0F6100951AEF /* Build configuration list for PBXNativeTarget "PictoBloxUITests" */;
+			buildPhases = (
+				83940BBD254D0F6100951AEF /* Sources */,
+				83940BBE254D0F6100951AEF /* Frameworks */,
+				83940BBF254D0F6100951AEF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				83940BC3254D0F6100951AEF /* PBXTargetDependency */,
+			);
+			name = PictoBloxUITests;
+			productName = PictoBloxUITests;
+			productReference = 83940BC1254D0F6100951AEF /* PictoBloxUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		83940B98254D0F5C00951AEF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1210;
+				LastUpgradeCheck = 1210;
+				TargetAttributes = {
+					83940B9F254D0F5C00951AEF = {
+						CreatedOnToolsVersion = 12.1;
+					};
+					83940BB5254D0F6000951AEF = {
+						CreatedOnToolsVersion = 12.1;
+						TestTargetID = 83940B9F254D0F5C00951AEF;
+					};
+					83940BC0254D0F6100951AEF = {
+						CreatedOnToolsVersion = 12.1;
+						TestTargetID = 83940B9F254D0F5C00951AEF;
+					};
+				};
+			};
+			buildConfigurationList = 83940B9B254D0F5C00951AEF /* Build configuration list for PBXProject "PictoBlox" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 83940B97254D0F5C00951AEF;
+			productRefGroup = 83940BA1254D0F5C00951AEF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				83940B9F254D0F5C00951AEF /* PictoBlox */,
+				83940BB5254D0F6000951AEF /* PictoBloxTests */,
+				83940BC0254D0F6100951AEF /* PictoBloxUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		83940B9E254D0F5C00951AEF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				83940BB0254D0F6000951AEF /* LaunchScreen.storyboard in Resources */,
+				83940BAD254D0F6000951AEF /* Assets.xcassets in Resources */,
+				83940BAB254D0F5C00951AEF /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		83940BB4254D0F6000951AEF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		83940BBF254D0F6100951AEF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		83940B9C254D0F5C00951AEF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				83940BA8254D0F5C00951AEF /* ViewController.swift in Sources */,
+				83940BA4254D0F5C00951AEF /* AppDelegate.swift in Sources */,
+				83940BA6254D0F5C00951AEF /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		83940BB2254D0F6000951AEF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				83940BBB254D0F6100951AEF /* PictoBloxTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		83940BBD254D0F6100951AEF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				83940BC6254D0F6100951AEF /* PictoBloxUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		83940BB8254D0F6000951AEF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 83940B9F254D0F5C00951AEF /* PictoBlox */;
+			targetProxy = 83940BB7254D0F6000951AEF /* PBXContainerItemProxy */;
+		};
+		83940BC3254D0F6100951AEF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 83940B9F254D0F5C00951AEF /* PictoBlox */;
+			targetProxy = 83940BC2254D0F6100951AEF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		83940BA9254D0F5C00951AEF /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				83940BAA254D0F5C00951AEF /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		83940BAE254D0F6000951AEF /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				83940BAF254D0F6000951AEF /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		83940BC8254D0F6100951AEF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		83940BC9254D0F6100951AEF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		83940BCB254D0F6100951AEF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2AA7VP743Q;
+				INFOPLIST_FILE = PictoBlox/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.world.PictoBlox;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		83940BCC254D0F6100951AEF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2AA7VP743Q;
+				INFOPLIST_FILE = PictoBlox/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.world.PictoBlox;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		83940BCE254D0F6100951AEF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2AA7VP743Q;
+				INFOPLIST_FILE = PictoBloxTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.world.PictoBloxTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PictoBlox.app/PictoBlox";
+			};
+			name = Debug;
+		};
+		83940BCF254D0F6100951AEF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2AA7VP743Q;
+				INFOPLIST_FILE = PictoBloxTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.world.PictoBloxTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PictoBlox.app/PictoBlox";
+			};
+			name = Release;
+		};
+		83940BD1254D0F6100951AEF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2AA7VP743Q;
+				INFOPLIST_FILE = PictoBloxUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.world.PictoBloxUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = PictoBlox;
+			};
+			name = Debug;
+		};
+		83940BD2254D0F6100951AEF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2AA7VP743Q;
+				INFOPLIST_FILE = PictoBloxUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.world.PictoBloxUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = PictoBlox;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		83940B9B254D0F5C00951AEF /* Build configuration list for PBXProject "PictoBlox" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				83940BC8254D0F6100951AEF /* Debug */,
+				83940BC9254D0F6100951AEF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		83940BCA254D0F6100951AEF /* Build configuration list for PBXNativeTarget "PictoBlox" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				83940BCB254D0F6100951AEF /* Debug */,
+				83940BCC254D0F6100951AEF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		83940BCD254D0F6100951AEF /* Build configuration list for PBXNativeTarget "PictoBloxTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				83940BCE254D0F6100951AEF /* Debug */,
+				83940BCF254D0F6100951AEF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		83940BD0254D0F6100951AEF /* Build configuration list for PBXNativeTarget "PictoBloxUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				83940BD1254D0F6100951AEF /* Debug */,
+				83940BD2254D0F6100951AEF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 83940B98254D0F5C00951AEF /* Project object */;
+}
