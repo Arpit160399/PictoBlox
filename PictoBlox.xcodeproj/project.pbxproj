@@ -15,6 +15,7 @@
 		83940BB0254D0F6000951AEF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83940BAE254D0F6000951AEF /* LaunchScreen.storyboard */; };
 		83940BBB254D0F6100951AEF /* PictoBloxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83940BBA254D0F6000951AEF /* PictoBloxTests.swift */; };
 		83940BC6254D0F6100951AEF /* PictoBloxUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83940BC5254D0F6100951AEF /* PictoBloxUITests.swift */; };
+		83940BD7254D0F7A00951AEF /* web Code in Resources */ = {isa = PBXBuildFile; fileRef = 83940BD6254D0F7A00951AEF /* web Code */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		83940BC1254D0F6100951AEF /* PictoBloxUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PictoBloxUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		83940BC5254D0F6100951AEF /* PictoBloxUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictoBloxUITests.swift; sourceTree = "<group>"; };
 		83940BC7254D0F6100951AEF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		83940BD6254D0F7A00951AEF /* web Code */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "web Code"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 				83940BA7254D0F5C00951AEF /* ViewController.swift */,
 				83940BA9254D0F5C00951AEF /* Main.storyboard */,
 				83940BAC254D0F6000951AEF /* Assets.xcassets */,
+				83940BD6254D0F7A00951AEF /* web Code */,
 				83940BAE254D0F6000951AEF /* LaunchScreen.storyboard */,
 				83940BB1254D0F6000951AEF /* Info.plist */,
 			);
@@ -232,6 +235,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				83940BB0254D0F6000951AEF /* LaunchScreen.storyboard in Resources */,
+				83940BD7254D0F7A00951AEF /* web Code in Resources */,
 				83940BAD254D0F6000951AEF /* Assets.xcassets in Resources */,
 				83940BAB254D0F5C00951AEF /* Main.storyboard in Resources */,
 			);
