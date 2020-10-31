@@ -1,4 +1,6 @@
 # PictoBlox
 Task1/WKWebView App injecting web code
-#screenShots
-Simulator Screen Shot - iPhone 11 - 2020-10-31 at 14.43.44.png
+
+# ScreenShots
+![image](https://raw.githubusercontent.com/Arpit160399/PictoBlox/main/Simulator%20Screen%20Shot%20-%20iPhone%2011%20-%202020-10-31%20at%2014.43.44.png)
+![image](https://raw.githubusercontent.com/Arpit160399/PictoBlox/main/Simulator%20Screen%20Shot%20-%20iPhone%2011%20-%202020-10-31%20at%2014.43.54.png)
