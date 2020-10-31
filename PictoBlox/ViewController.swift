@@ -10,12 +10,8 @@ import WebKit
 class ViewController: UIViewController {
    
     private var webView: WKWebView!
-    private let name = "count"
-    private var count = 0
     private let configuration = WKWebViewConfiguration()
     private let acivityIndicater = UIActivityIndicatorView()
-    private let forward = UIButton()
-    private let backward = UIButton()
     private lazy var loadingView: UIView = {
         let loadingView = UIView()
         loadingView.addSubview(acivityIndicater)
@@ -32,16 +28,17 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        setUpNavigation()
+        view.backgroundColor = .white
         setUpWebView()
+        setUpToolBar()
         setUploadView()
+        
     }
-
+    
     fileprivate func setUpWebView() {
-        configuration.userContentController.add(self, name: name)
         webView = WKWebView(frame: .zero, configuration: configuration)
         view.addSubview(webView)
-        let url = URL(string: "https://apple.com")!
+        let url = URL(string: "https://developer.apple.com/documentation/webkit/wkwebview")!
         let request = URLRequest(url: url)
         webView.load(request)
         webView.navigationDelegate = self
@@ -58,50 +55,21 @@ class ViewController: UIViewController {
 // MARK: - setting site Navigation system
 extension ViewController {
     
-    fileprivate func setUpNavigation(){
-        navigationController?.navigationBar.barTintColor = .systemBlue
-        navigationController?.navigationBar.tintColor = .white
-        forward.setTitle("Forward", for: .normal)
-        backward.setTitle("backward", for: .normal)
-        navigationItem.leftBarButtonItem = UIBarButtonItem(customView: backward)
-        navigationItem.rightBarButtonItem = UIBarButtonItem(customView: forward)
-        forward.addTarget(self, action: #selector(moveForward), for: .touchUpInside)
-        backward.addTarget(self, action: #selector(moveBackward), for: .touchUpInside)
+    fileprivate func setUpToolBar(){
+     let toolBar = UIToolbar()
+        toolBar.setItems([UIBarButtonItem(title: "Back", style: .plain, target: self, action: #selector(moveBackward))], animated: false)
+        view.addSubview(toolBar)
+        toolBar.translatesAutoresizingMaskIntoConstraints = false
+        toolBar.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
+        toolBar.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
+        toolBar.bottomAnchor.constraint(equalTo: view.bottomAnchor,constant: -15).isActive = true
     }
     
-  @objc func moveForward(){
-        webView.goForward()
-    }
-    
+ 
    @objc func moveBackward(){
-        webView.goBack()
+        dismiss(animated: true, completion: nil)
     }
     
-}
-// MARK: - Scrpit message handler
-
-extension ViewController: WKScriptMessageHandler {
-    
-    func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {
-        if message.name == name {
-            guard let value = message.body as? String else { return }
-            count += 1
-            let script = "updateLable(\(count))"
-            webView.evaluateJavaScript(script, completionHandler: nil)
-            showMessage(message: value, second: 1)
-        }
-    }
-
-    func showMessage(message: String, second: Double) {
-        let alert = UIAlertController(title: "Message", message: message, preferredStyle: .alert)
-        alert.view.backgroundColor = .black
-        alert.view.alpha = 0.6
-        alert.view.layer.cornerRadius = 15
-        present(alert, animated: true, completion: nil)
-        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + second) {
-            alert.dismiss(animated: true, completion: nil)
-        }
-    }
 }
 
 // MARK: - Setting Load page
@@ -113,20 +81,6 @@ extension ViewController: WKNavigationDelegate {
 
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
         stopAnimation()
-        if webView.canGoBack {
-            backward.isEnabled = true
-            backward.alpha = 1
-        } else {
-            backward.isEnabled = false
-            backward.alpha = 0.4
-        }
-        if webView.canGoForward {
-            forward.isEnabled = true
-            forward.alpha = 1
-        } else {
-            forward.isEnabled = false
-            forward.alpha = 0.4
-        }
     }
 
     private func setUploadView() {

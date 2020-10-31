@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8327F24E254DCA4D0038CEFB /* StartingPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8327F24D254DCA4D0038CEFB /* StartingPage.swift */; };
 		83940BA4254D0F5C00951AEF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83940BA3254D0F5C00951AEF /* AppDelegate.swift */; };
 		83940BA6254D0F5C00951AEF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83940BA5254D0F5C00951AEF /* SceneDelegate.swift */; };
 		83940BA8254D0F5C00951AEF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83940BA7254D0F5C00951AEF /* ViewController.swift */; };
@@ -36,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8327F24D254DCA4D0038CEFB /* StartingPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartingPage.swift; sourceTree = "<group>"; };
 		83940BA0254D0F5C00951AEF /* PictoBlox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PictoBlox.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		83940BA3254D0F5C00951AEF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		83940BA5254D0F5C00951AEF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -104,6 +106,7 @@
 				83940BA3254D0F5C00951AEF /* AppDelegate.swift */,
 				83940BA5254D0F5C00951AEF /* SceneDelegate.swift */,
 				83940BA7254D0F5C00951AEF /* ViewController.swift */,
+				8327F24D254DCA4D0038CEFB /* StartingPage.swift */,
 				83940BA9254D0F5C00951AEF /* Main.storyboard */,
 				83940BAC254D0F6000951AEF /* Assets.xcassets */,
 				83940BD6254D0F7A00951AEF /* web Code */,
@@ -264,6 +267,7 @@
 			files = (
 				83940BA8254D0F5C00951AEF /* ViewController.swift in Sources */,
 				83940BA4254D0F5C00951AEF /* AppDelegate.swift in Sources */,
+				8327F24E254DCA4D0038CEFB /* StartingPage.swift in Sources */,
 				83940BA6254D0F5C00951AEF /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
