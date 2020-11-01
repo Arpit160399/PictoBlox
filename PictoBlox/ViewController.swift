@@ -10,12 +10,12 @@ import WebKit
 class ViewController: UIViewController {
    
     private var webView: WKWebView!
-    private let name = "count"
-    private var count = 0
     private let configuration = WKWebViewConfiguration()
     private let acivityIndicater = UIActivityIndicatorView()
+    private var Blog = true
     private let forward = UIButton()
     private let backward = UIButton()
+    private let showBlog = UIButton()
     private lazy var loadingView: UIView = {
         let loadingView = UIView()
         loadingView.addSubview(acivityIndicater)
@@ -38,7 +38,6 @@ class ViewController: UIViewController {
     }
 
     fileprivate func setUpWebView() {
-        configuration.userContentController.add(self, name: name)
         webView = WKWebView(frame: .zero, configuration: configuration)
         view.addSubview(webView)
         let url = URL(string: "https://apple.com")!
@@ -62,11 +61,13 @@ extension ViewController {
         navigationController?.navigationBar.barTintColor = .systemBlue
         navigationController?.navigationBar.tintColor = .white
         forward.setTitle("Forward", for: .normal)
-        backward.setTitle("backward", for: .normal)
+        backward.setTitle("Backward", for: .normal)
+        showBlog.setTitle("Blog", for: .normal)
         navigationItem.leftBarButtonItem = UIBarButtonItem(customView: backward)
-        navigationItem.rightBarButtonItem = UIBarButtonItem(customView: forward)
+        navigationItem.rightBarButtonItems = [UIBarButtonItem(customView: forward),UIBarButtonItem(customView: showBlog)]
         forward.addTarget(self, action: #selector(moveForward), for: .touchUpInside)
         backward.addTarget(self, action: #selector(moveBackward), for: .touchUpInside)
+        showBlog.addTarget(self, action: #selector(loadHtml), for: .touchUpInside)
     }
     
   @objc func moveForward(){
@@ -78,32 +79,6 @@ extension ViewController {
     }
     
 }
-// MARK: - Scrpit message handler
-
-extension ViewController: WKScriptMessageHandler {
-    
-    func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {
-        if message.name == name {
-            guard let value = message.body as? String else { return }
-            count += 1
-            let script = "updateLable(\(count))"
-            webView.evaluateJavaScript(script, completionHandler: nil)
-            showMessage(message: value, second: 1)
-        }
-    }
-
-    func showMessage(message: String, second: Double) {
-        let alert = UIAlertController(title: "Message", message: message, preferredStyle: .alert)
-        alert.view.backgroundColor = .black
-        alert.view.alpha = 0.6
-        alert.view.layer.cornerRadius = 15
-        present(alert, animated: true, completion: nil)
-        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + second) {
-            alert.dismiss(animated: true, completion: nil)
-        }
-    }
-}
-
 // MARK: - Setting Load page
 
 extension ViewController: WKNavigationDelegate {
@@ -147,4 +122,25 @@ extension ViewController: WKNavigationDelegate {
         acivityIndicater.stopAnimating()
         loadingView.isHidden = true
     }
+    
+    @objc private func loadHtml(){
+        if Blog
+        {
+            guard let path = Bundle.main.path(forResource: "index", ofType: "html", inDirectory: "web Code") else { return }
+        do {
+        let html = try String(contentsOfFile: path)
+        webView.loadHTMLString(html, baseURL: nil)
+            showBlog.setTitle("Site", for: .normal)
+        } catch {
+           print(error)
+        }
+        } else {
+            let url = URL(string: "https://apple.com")!
+            let request = URLRequest(url: url)
+            showBlog.setTitle("Blog", for: .normal)
+            webView.load(request)
+        }
+        Blog = !Blog
+    }
+    
 }

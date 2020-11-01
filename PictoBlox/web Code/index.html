@@ -1,0 +1,204 @@
+<!doctype html>
+<html class="no-js" lang="zxx" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>WebView Blog</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+</head>
+<body class="c">
+    <H1 class="text-center">WebView Blog</H1>
+<div class="col">
+  <div class="col">
+    <h2>Initializing a Web View</h2>
+    <div class="row">
+        <div class="jumbotron jumbotron-fluid">
+         <div class="container">
+         <p class="h4">init(frame: <small class="text-muted">CGRect</small>, configuration: <small class="text-muted">WKWebViewConfiguration</small>)</p>
+         <p class="h5">Parameters</p>
+         <p > <strong>frame</strong></p>
+         <p><small> The frame for the new web view.</small></p>
+         <p> <strong>configuration</strong></p>
+         <p><small> The configuration for the new web view</small></p>
+         <p class="h5"> Return Value</p>
+         <p><small> An initialized web view, or nil if the object could not be initialized.</small></p>
+        </div>
+      </div>
+    </div>
+    </div>
+    <div class="col">
+    <h2>Inspecting the View Information</h2>
+    <div class="row">
+        <div class="jumbotron jumbotron-fluid">
+         <div class="container">
+         <p class="h4"><small class="text-muted">var  </small> ScrollView: <small class="text-muted">UIScrollView</small></p>
+         <p><small> The scroll view associated with the web view.</small></p>
+         <p class="h4"><small class="text-muted">var  </small> title: <small class="text-muted">String?</small></p>
+         <p><small> The page title.</small></p>
+         <p class="h4"><small class="text-muted">var  </small> url: <small class="text-muted">URL?</small></p>
+         <p><small> The active URL</small></p>
+         <p class="h4"><small class="text-muted">var  </small> CustomUserAgent: <small class="text-muted">String?</small></p>
+         <p><small> The custom user agent string</small></p>
+         <p class="h4"><small class="text-muted">var  </small> serverTrust: <small class="text-muted">SecTrust?</small></p>
+         <p><small> The custom user agent string</small></p>
+        </div>
+      </div>
+    </div>
+  </div> 
+    <div class="col">
+    <h2>Setting Delegates</h2>
+    <div class="row">
+        <div class="jumbotron jumbotron-fluid">
+         <div class="container">
+         <p class="h4"><small class="text-muted">var  </small>  navigationDelegate: <small class="text-muted">WKNavigationDelegate?</small></p>
+         <p><small> The web view's navigation delegate.</small></p>
+         <p class="h4"><small class="text-muted">var  </small> uiDelegate:
+ <small class="text-muted"> WKUIDelegate?</small></p>
+         <p><small> The web view's user interface delegate.</small></p>
+        </div>
+      </div>
+    </div>
+</div> 
+    <div class="col">
+    <h2>Loading Content</h2>
+    <div class="row">
+        <div class="jumbotron jumbotron-fluid">
+         <div class="container">
+         <p class="h4"><small class="text-muted">var  </small>  estimatedProgress: 
+ <small class="text-muted">Double</small></p>
+         <p><small>An estimate of what fraction of the current navigation has been loaded..</small></p>
+         <p class="h4"><small class="text-muted">var  </small> hasOnlySecureContent:  <small class="text-muted"> Bool</small></p>
+         <p><small> A Boolean value indicating whether all resources on the page have been loaded through securely encrypted connections.</small></p>
+        <p class="h4"><small class="text-muted">var  </small> hasOnlySecureContent:  <small class="text-muted"> Bool</small></p>
+         <p><small> A Boolean value indicating whether all resources on the page have been loaded through securely encrypted connections.</small></p>
+        <p class="h4"><small class="text-muted">var  </small>isLoading: <small class="text-muted"> Bool</small></p>
+         <p><small> A Boolean value indicating whether the view is currently loading content.</small></p>
+         <p class="h4"><small class="text-muted">func</small> loadHTMLString(<small class="text-muted">String</small>, baseURL: <small class="text-muted">URL?</small>)-><small class="text-muted">WKNavigation?</small> </p>
+          <p class="h5">Parameters</p>
+         <p > <strong>string</strong></p>
+         <p><small> The string to use as the contents of the webpage.</small></p>
+         <p> <strong>baseURL</strong></p>
+         <p><small> A URL used to resolve relative URLs within the document.</small></p>
+         <p class="h5"> Return Value</p>
+         <p><small>A new navigation.</small></p>
+          <p class="h4"><small class="text-muted">func  </small> reload() -> <small class="text-muted"> WKNavigation?</small></p>
+         <p><small> Reloads the current page.</small></p>
+          <p class="h4"><small class="text-muted">func  </small> reloadFromOrigin() -> <small class="text-muted"> WKNavigation?</small></p>
+         <p><small> Reloads the current page, performing end-to-end revalidation using cache-validating conditionals if possible.</small></p>
+         <p class="h4"><small class="text-muted">func </small> stopLoading()</p>
+         <p><small> Stops loading all resources on the current page.</small></p>
+          <p class="h4"><small class="text-muted">func</small> loadHTMLString(<small class="text-muted">String</small>, baseURL: <small class="text-muted">URL?</small>)-><small class="text-muted">WKNavigation?</small> </p>
+          <p class="h5">Parameters</p>
+         <p > <strong>string</strong></p>
+         <p><small> The string to use as the contents of the webpage.</small></p>
+         <p> <strong>baseURL</strong></p>
+         <p><small> A URL used to resolve relative URLs within the document.</small></p>
+         <p class="h5"> Return Value</p>
+         <p><small>A new navigation.</small></p>
+          <p class="h4"><small class="text-muted">func</small> load(<small class="text-muted">Data</small>, mimeType MIMEType: <small class="text-muted">String,</small> characterEncodingName: <small class="text-muted">String,</small>baseURL: <small class="text-muted">URL</small>)-><small class="text-muted">WKNavigation?</small> </p>
+          <p class="h5">Parameters</p>
+         <p > <strong>data</strong></p>
+         <p><small> The data to use as the contents of the webpage.</small></p>
+         <p> <strong>MIMEType</strong></p>
+         <p><small> The MIME type of the data..</small></p>
+          <p> <strong>characterEncodingName</strong></p>
+         <p><small> The data's character encoding name..</small></p>
+          <p> <strong>baseURL</strong></p>
+         <p><small> A URL used to resolve relative URLs within the document.</small></p>
+         <p class="h5"> Return Value</p>
+         <p><small>A new navigation.</small></p>
+          <p class="h4"><small class="text-muted">func</small> loadFileURL(_ URL:<small class="text-muted"> URL</small>, allowingReadAccessTo readAccessURL: <small class="text-muted">URL</small>)-><small class="text-muted">WKNavigation?</small> </p>
+          <p class="h5">Parameters</p>
+         <p > <strong>URL</strong></p>
+         <p><small> The file URL to navigate to.</small></p>
+         <p> <strong>readAccessURL</strong></p>
+         <p><small> The URL to allow read access to.</small></p>
+         <p class="h5"> Return Value</p>
+         <p><small>A new navigation for the given file URL.</small></p>
+        </div>
+      </div>
+    </div>
+</div> 
+   <div class="col">
+    <h2>Executing JavaScript</h2>
+    <div class="row">
+        <div class="jumbotron jumbotron-fluid">
+         <div class="container">
+  <p class="h4"><small class="text-muted">func</small> evaluateJavaScript(_ javaScriptString:<small class="text-muted">String</small>, completionHandler: <small class="text-muted">((Any?, Error?) -> Void)?</small>)</p>
+          <p class="h5">Parameters</p>
+         <p > <strong>javaScriptString</strong></p>
+         <p><small> The JavaScript string to evaluate.</small></p>
+         <p> <strong>completionHandler</strong></p>
+         <p><small> A block to invoke when script evaluation completes or fails.</small></p>
+        </div>
+      </div>
+    </div>
+</div> 
+ <div class="col">
+    <h2>Taking Snapshots</h2>
+    <div class="row">
+        <div class="jumbotron jumbotron-fluid">
+         <div class="container">
+         <p class="h4"><small class="text-muted">func</small> takeSnapshot(with snapshotConfiguration:<small class="text-muted">WKSnapshotConfiguration?</small>, completionHandler: <small class="text-muted">@escaping (UIImage?, Error?)-> Void</small>)</p>
+         <p><small>Takes a snapshot of the view's visible viewport.</small></p>
+        </div>
+      </div>
+    </div>
+</div> 
+ <div class="col">
+    <h2>Instance Properties</h2>
+    <div class="row">
+        <div class="jumbotron jumbotron-fluid">
+         <div class="container">
+         <p class="h4"><small class="text-muted">var  </small>  mediaType: <small class="text-muted">String ?</small></p>
+         <p class="h4"><small class="text-muted">var  </small> pageZoom: <small class="text-muted"> CGFloat</small></p>
+        </div>
+      </div>
+    </div>
+</div> 
+  <div class="col">
+    <h2>Navigating</h2>
+    <div class="row">
+        <div class="jumbotron jumbotron-fluid">
+         <div class="container">
+<p class="h4"><small class="text-muted">var  </small>  allowsBackForwardNavigationGestures: 
+<small class="text-muted">Bool</small></p>
+         <p><small> A Boolean value indicating whether horizontal swipe gestures will trigger back-forward list navigations.</small></p>
+         <p class="h4"><small class="text-muted">var  </small>  backForwardList: <small class="text-muted">WKBackForwardList</small></p>
+         <p><small> The web view's back-forward list.</small></p>
+         <p class="h4"><small class="text-muted">var  </small>  canGoBack: 
+<small class="text-muted">Bool</small></p>
+         <p><small> A Boolean value indicating whether there is a back item in the back-forward list that can be navigated to.</small></p>
+         <p class="h4"><small class="text-muted">var  </small> canGoForward: 
+<small class="text-muted">Bool</small></p>
+         <p><small> A Boolean value indicating whether there is a forward item in the back-forward list that can be navigated to.</small></p>
+         <p class="h4"><small class="text-muted">var  </small> allowsLinkPreview: 
+<small class="text-muted">Bool</small></p>
+         <p><small>A Boolean value that determines whether pressing on a link displays a preview of the destination for the link.</small></p>
+          <p class="h4"><small class="text-muted">func  </small> goBack() -> 
+<small class="text-muted">WKNavigation?</small></p>
+         <p><small>Navigates to the back item in the back-forward list.</small></p>
+          <p class="h4"><small class="text-muted">func </small> goForward() -> 
+<small class="text-muted">WKNavigation?</small></p>
+         <p><small>Navigates to the forward item in the back-forward list.</small></p>
+  <p class="h4"><small class="text-muted">func</small> go(to item:<small class="text-muted">WKBackForwardListItem</small>)-> <small class="text-muted">WKNavigation?</small></p>
+          <p class="h5">Parameters</p>
+         <p > <strong>item</strong></p>
+         <p><small> The item to navigate to. The item must be one of the items in the web view’s back-forward list.</small></p>
+         <p class="h5">Return Value</p>
+         <p><small> A new navigation to the requested item, or nil if it is already the current item or is not part of the web view's back-forward list.</small></p>
+         <p class="h4"><small class="text-muted">func</small> load(_ request:<small class="text-muted">URLRequest</small>)-> <small class="text-muted">WKNavigation?</small></p>
+          <p class="h5">Parameters</p>
+         <p > <strong>request</strong></p>
+         <p><small> The request specifying the URL to navigate to.</small></p>
+         <p class="h5">Return Value</p>
+         <p><small> A new navigation for the given request.</small></p>
+        </div>
+      </div>
+    </div>
+</div> 
+</div>   
+</body>
+</html>
