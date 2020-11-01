@@ -1,4 +1,4 @@
-# PictoBlox
+# WebView app
 Task1/WKWebView App injecting web code
 
 # ScreenShots
